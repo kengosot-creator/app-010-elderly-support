@@ -80,3 +80,36 @@ body {
   .widget { border-radius: 9px; padding: 4px; }
   .app-footer { display: none; }
 }
+/* タブレット表示の拡大調整 */
+@media screen and (min-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dashboard {
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    min-height: 100dvh;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+}
+
+/* タブレット表示の拡大調整 */
+@media screen and (min-width: 700px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dashboard {
+    width: 100%;
+    max-width: none;
+    height: 100dvh;
+    min-height: 100dvh;
+    aspect-ratio: auto;
+    margin: 0;
+  }
+}

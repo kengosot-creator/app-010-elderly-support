@@ -17,11 +17,14 @@ function updateClock() {
     hourCycle: "h23"
   }).format(now);
 
-  renderSchedule();
 }
 
 updateClock();
-setInterval(updateClock, 15000);
+
+setInterval(() => {
+  updateClock();
+  renderSchedule();
+}, 15000);
 
 
 // ==============================

@@ -24,14 +24,16 @@
         <div id="currentTime" class="time-text">00:29</div>
       </article>
 
-      <article class="widget schedule-widget">
-        <div class="widget-heading"><span class="symbol" aria-hidden="true">▦</span><h2>今日の予定</h2></div>
-        <div class="schedule-list">
-          <div class="schedule-row"><time>10:00</time><span>デイサービス</span></div>
-          <div class="schedule-row"><time>14:00</time><span>訪問介護</span></div>
-          <div class="schedule-row"><time>16:30</time><span>家族から電話</span></div>
-        </div>
-      </article>
+      <article class="widget schedule-widget" id="scheduleWidget">
+  <div class="widget-heading">
+    <span class="symbol" aria-hidden="true">▦</span>
+    <h2 id="scheduleHeading">今日の予定</h2>
+  </div>
+  <div class="schedule-list" id="scheduleList"></div>
+  <button class="schedule-manage-button" id="scheduleManageButton" type="button">
+    予定を管理
+  </button>
+</article>
 
       <article class="widget medication-widget">
         <div class="symbol" aria-hidden="true">＋</div>
@@ -66,6 +68,49 @@
         <p>涼しい場所で過ごそう</p>
       </article>
     </section>
+    <dialog id="scheduleDialog" class="schedule-dialog">
+  <div class="dialog-header">
+    <h2>予定の確認・管理</h2>
+    <button type="button" id="closeScheduleDialog">閉じる</button>
+  </div>
+
+  <div id="scheduleDialogContent"></div>
+
+  <div class="schedule-settings">
+    <h3>予定の切替時刻</h3>
+    <label>
+      明日の予定に切り替える時刻
+      <input type="time" id="switchTime" value="18:00">
+    </label>
+    <button type="button" id="saveSwitchTime">時刻を保存</button>
+  </div>
+
+  <hr>
+
+  <h3 id="scheduleFormHeading">予定を追加</h3>
+  <form id="scheduleForm">
+    <input type="hidden" id="scheduleId">
+
+    <label>日付
+      <input type="date" id="scheduleDate" required>
+    </label>
+
+    <label>時刻
+      <input type="time" id="scheduleTime" required>
+    </label>
+
+    <label>予定名
+      <input type="text" id="scheduleTitle" maxlength="40" required>
+    </label>
+
+    <label>詳細
+      <textarea id="scheduleDetails" rows="3"></textarea>
+    </label>
+
+    <button type="submit">保存する</button>
+    <button type="button" id="cancelScheduleEdit">入力をクリア</button>
+  </form>
+</dialog>
     <footer class="app-footer">毎日を、安心して自分らしく。</footer>
   </main>
   <script src="./app.js"></script>

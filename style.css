@@ -108,17 +108,16 @@ body {
     display: none;
   }
 
-  .dashboard {
-    width: 100%;
-    height: calc(100% - 20px);
-    min-height: 0;
-    max-height: none;
-    flex: 1 1 auto;
-    aspect-ratio: auto;
+.dashboard {
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  flex: 1 1 0;
+  aspect-ratio: auto;
 
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-template-rows: repeat(6, minmax(0, 1fr));
-    gap: var(--gap);
-  }
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(6, minmax(0, 1fr));
+  gap: var(--gap);
 }

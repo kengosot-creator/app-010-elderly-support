@@ -1,4 +1,4 @@
-const CACHE_NAME = "elderly-support-stage1-v2";
+const CACHE_NAME = "elderly-support-stage1-v3";
 const APP_FILES = [
   "./",
   "./index.html",

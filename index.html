@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f8f5">
+  <meta name="description" content="高齢者向け見守り・生活支援アプリの試作版">
+  <title>毎日のくらし</title>
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div class="brand">毎日のくらし</div>
+      <button id="installButton" class="install-button" type="button" hidden>アプリをインストール</button>
+    </header>
+
+    <section class="dashboard" aria-label="通常画面">
+      <article class="widget date-widget" aria-label="日時">
+        <div id="todayDate" class="date-text">11月9日（月）</div>
+        <div id="currentTime" class="time-text">00:29</div>
+      </article>
+
+      <article class="widget schedule-widget">
+        <div class="widget-heading"><span class="symbol" aria-hidden="true">▦</span><h2>今日の予定</h2></div>
+        <div class="schedule-list">
+          <div class="schedule-row"><time>10:00</time><span>デイサービス</span></div>
+          <div class="schedule-row"><time>14:00</time><span>訪問介護</span></div>
+          <div class="schedule-row"><time>16:30</time><span>家族から電話</span></div>
+        </div>
+      </article>
+
+      <article class="widget medication-widget">
+        <div class="symbol" aria-hidden="true">＋</div>
+        <h2>お薬</h2>
+        <p class="main-value">本人申告</p>
+      </article>
+
+      <article class="widget blood-widget">
+        <div class="symbol" aria-hidden="true">♥</div>
+        <h2>血圧</h2>
+        <p class="main-value">128/76</p>
+      </article>
+
+      <article class="widget message-widget">
+        <div class="message-heading">
+          <div class="widget-heading"><span class="symbol" aria-hidden="true">✉</span><h2>家族からのメッセージ</h2></div>
+          <span class="unread">未読 1</span>
+        </div>
+        <p class="message-text">今度の日曜日に会いに行くね！</p>
+        <p class="message-meta">娘　15:30</p>
+      </article>
+
+      <article class="widget tips-widget">
+        <div class="symbol" aria-hidden="true">☘</div>
+        <h2>プチ健康情報</h2>
+        <p>水分補給を忘れずに</p>
+      </article>
+
+      <article class="widget advice-widget">
+        <div class="symbol" aria-hidden="true">☀</div>
+        <h2>今日のアドバイス</h2>
+        <p>涼しい場所で過ごそう</p>
+      </article>
+    </section>
+    <footer class="app-footer">毎日を、安心して自分らしく。</footer>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
